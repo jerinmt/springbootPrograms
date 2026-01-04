@@ -1,0 +1,11 @@
+body {
+	background-color: hsl(45, 70%, 60%);
+	padding-top: 20%;
+}
+h1 {
+	color: hsl(225, 100%, 30%);
+	font-weight: bold;
+	text-align: center;
+	margin-inline: auto;
+	width: 50%;
+}
