@@ -1,0 +1,13 @@
+body {
+	padding: 20px;
+	background-image: linear-gradient(to right, red, green, blue);
+}
+h1 {
+	text-align: center;
+	color: white;
+}
+
+button {
+	display: block;
+	margin-inline: auto;
+}
