@@ -15,7 +15,7 @@ public class mainController {
         model.addAttribute("firstLine", firstLine);
         String restLines = ". They befriends a gangster to hit back the bullies, but their college life changed forever.";
         model.addAttribute("restLines", restLines);
-        boolean isLoggedIn = true;
+        boolean isLoggedIn = false;
         model.addAttribute("isLoggedIn", isLoggedIn);
         return "home";
     }
