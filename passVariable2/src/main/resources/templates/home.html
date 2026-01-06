@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Recommended movie</title>
+	</head>
+	<body>
+		<h1 th:text="${movieTitle}"></h1>
+		<div th:if="${isLoggedIn}">
+			<p>
+				<span th:text="${firstLine}"></span>
+				<span th:text="${restLines}"></span>
+			</p>
+		</div>
+		<div th:if="${!isLoggedIn}">
+		    <p>
+				<span  th:text="${firstLine}"></span>
+				<span>...</span>
+			</p>
+			<h2>Log in to see the full description.</h2>
+		</div>
+	</body>
+</html>
