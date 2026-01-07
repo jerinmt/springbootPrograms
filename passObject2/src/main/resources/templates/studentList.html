@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student List</title>
+</head>
+<body>
+    <h1>Student List</h1>
+    <table border=”1”>
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Marks</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="record : ${records}">
+                <td th:text="${record.rollNo}"></td>
+                <td th:text="${record.name}"></td>
+                <td th:text="${record.marks}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
