@@ -1,0 +1,19 @@
+body {
+	background-color: hsl(23, 75%, 80%);
+}
+h1 {
+	color: hsl(203, 100%, 50%);
+}
+nav {
+	background-color: aquamarine;
+}
+ul {
+	display: flex;
+}
+li {
+	text-decoration: none;
+	flex: 1;
+}
+footer {
+	text-align: center;
+}

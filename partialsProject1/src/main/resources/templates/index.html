@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Home page</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">  		
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+	<body>
+		<div th:replace="navbar :: navbar"></div>
+		<h1>Welcome to my app</h1>
+		<a th:href="@{/products}">Go to Product Details</a>
+		<div th:replace="footer :: footer"></div>
+	</body>
+</html>

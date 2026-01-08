@@ -1,0 +1,19 @@
+body {
+	background-color: hsl(85, 35%, 80%);
+}
+h1 {
+	color: hsl(245 100%, 50%);
+}
+nav {
+	background-color: burlywood;
+}
+nav ul {
+	display: flex;
+	justify-content: space-evenly;
+}
+nav li {
+	flex: 1;
+}
+footer {
+	text-align: center;
+}
