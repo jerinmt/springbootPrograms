@@ -1,4 +1,4 @@
-package com.example.formsproject1;
+package com.example.formsProject2;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
@@ -11,7 +11,7 @@ import jakarta.validation.Payload;
 @Retention(RetentionPolicy.RUNTIME) 
 public @interface Address {
      
-    public String message() default "You address must contains india"; 
+    public String message() default "You address must contain India"; 
     public Class<?>[] groups() default {}; 
     public Class<? extends Payload>[] payload() default {}; 
 } 

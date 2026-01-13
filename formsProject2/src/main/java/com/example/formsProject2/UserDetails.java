@@ -1,5 +1,5 @@
-package com.example.formsproject1;
-import jakarta.validation.constraints.Email;
+package com.example.formsProject2;
+
 import jakarta.validation.constraints.NotBlank;
 
 public class UserDetails {
@@ -7,10 +7,12 @@ public class UserDetails {
     @NotBlank(message = "Name is required")
     public String name;
     
-    @Email(message = "Email address is not valid")
     @NotBlank(message = "Email address is required")
+    @GmailOnly(message = "Email address should be from Gmail")
     public String email;
-    @Address(message = "Your address must contain India.")
+    
+    @NotBlank(message = "Address is required")
+    @Address(message = "Your address must contain India")
     public String address;
     
     public String getName() {

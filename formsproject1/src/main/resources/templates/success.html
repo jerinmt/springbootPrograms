@@ -4,9 +4,9 @@
     <title>Form Submission Successful</title>
 </head>
 <body>
-    <h1>Form Submission Successful</h1>
-    <p>Thank you for submitting the form. Your details have been successfully processed.</p>
-	<p>Name: <b th:text="${userDetails.name}"></b></p>
-	<p>Email: <b th:text="${userDetails.email}"></b></p>
+    <h1>Welcome <span th:text="${name}"></span></h1>
+	<b>Form submission successful</b>
+	<p>Name: <b th:text="${name}"></b></p>
+	<p>Email: <b th:text="${email}"></b></p>
 </body>
 </html>

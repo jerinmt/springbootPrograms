@@ -1,14 +1,13 @@
-package com.example.formsproject1;
+package com.example.formsProject2;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
 public class AddressValidator implements ConstraintValidator<Address, String> {
-    @Override
+	@Override
     public boolean isValid(String s, ConstraintValidatorContext cvc) {
         s = s.toLowerCase();
         boolean result = s.contains("india");
         return result;
     }
-
 }
