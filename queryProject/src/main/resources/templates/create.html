@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Add Mobile</title>
+	</head>
+	<body>
+		<h1>Add new mobile</h1>
+		<p th:text="${message}"></p>
+		<form action="#" th:action="@{/create}" method="post">
+		    <label>Name:</label>
+		    <input type="text" name="name" required /><br/>
+		    <label>Brand:</label>
+		    <input type="text" name="brand" required /><br/>
+		    <label>Price:</label>
+		    <input type="text" name="price" required /><br/>
+			<label>Type:</label>
+			<select name="type" required>
+				<option value="iPhone">iPhone</option>
+				<option value="Android">Android</option>
+			</select>
+		    <input type="submit" value="Add" />
+		</form>
+	</body>
+</html>
