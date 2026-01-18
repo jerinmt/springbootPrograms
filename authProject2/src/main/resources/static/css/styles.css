@@ -1,0 +1,44 @@
+body {
+	background-color: hsl(28, 50%, 80%);
+	color: white;
+}
+
+header {
+	background-color: hsl(178, 100%, 20%);
+	text-align: center;
+	font-weight: 900;
+	font-size: large;
+	padding: 20px;
+}
+
+footer {
+	background-color: hsl(178, 100%, 20%);
+	text-align: center;
+	padding: 20px;
+}
+
+h1 {
+	margin-inline: auto;
+	width: fit-content;
+}
+
+.success {
+	border: 4px solid black;
+	background-color: hsl(238, 50%, 50%);
+	border-radius: 8px;
+}
+
+form {
+	border: 4px dashed black;
+	background-color: hsl(238, 50%, 50%);
+	border-radius: 12px;
+	width: 300px;
+	margin-inline: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+	padding: 10px;
+}
+button {
+	align-self: center;
+}

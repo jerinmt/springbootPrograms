@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Registration success</title>
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<header>Zen Library</header>
+		<h1 class="success" th:if="${name != null}">
+			Welcome, [[${name}]]! Your library membership has been created.
+        </h1>
+		<footer>Copyright</footer>
+	</body>
+</html>
