@@ -61,7 +61,11 @@ public class ApiController {
     
      @GetMapping("api/search")
         List<Books> searchBook(@Param("keyword") String keyword) {
-    	 return bookRepository.findAllByKeyword(keyword);
+    	 List<Books> result = bookRepository.findAllByKeyword(keyword); 
+    	 if(result.isEmpty()) {
+    		 throw new BookNotFoundException(keyword);
+    	 }
+    	 return result;
             		
         }
 }

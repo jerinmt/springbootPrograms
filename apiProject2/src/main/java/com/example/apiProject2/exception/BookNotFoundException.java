@@ -5,4 +5,7 @@ public class BookNotFoundException extends RuntimeException{
 	public BookNotFoundException(Long id){
         super("Could not find the book with id "+ id);
     }
+	public BookNotFoundException(String keyword){
+        super("Could not find the book with keyword "+ keyword);
+    }
 }
