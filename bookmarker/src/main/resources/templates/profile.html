@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Bookmarks</title>
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+	<body>
+		<nav><ul>
+			<li><a th:href="@{/}">Home</a> </li>
+			<li><a href="/logout">Logout</a> </li>
+		</ul></nav>
+		
+		<div class="search">
+			<h2>Search for a bookmark</h2>
+			<form action="#" th:action="@{/search}" method="get">
+			    <input class="searchBar" type="text" name="keyword" placeholder="Search in bookmark title or url" />
+			    <input type="submit" value="Search" />
+			</form>
+		</div>
+		<h1 th:text="${welcome}"></h1>
+		<div th:if="${count > 0}" class="list">
+			<h2>Saved Bookmarks</h2>
+			<table>
+			    <thead>
+			        <tr>
+						<th></th>
+			            <th>Name</th>
+			            <th>URL</th>
+						<th>Saved on</th>
+			            <th>Actions</th>
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <tr th:each="bookmark : ${bookmarks}">
+						<td><img src="/images/bookmark-filled.svg" width="20px" height="20px"></td>			            
+			            <td th:text="${bookmark.title}"></td>
+			            <td><a th:href="${bookmark.savedURL}" th:text="${bookmark.savedURL}"></a></td>
+						<td th:text="${#temporals.format(bookmark.savedDate, 'MMMM dd, yyyy HH:mm')}"></td>			  
+			            <td>
+			                <a th:href="@{/update/{id}(id=${bookmark.id})}">Edit</a>
+						    <a th:href="@{/delete/{id}(id=${bookmark.id})}">Delete</a>							            
+			            </td>
+			        </tr>
+			    </tbody>
+			</table>
+			<div th:if="${totalPages > 1}">
+		        <div class="row">
+					<div class="paginationButton">
+		                <a th:if="${currentPage > 1}" th:href="@{/profile(page=${currentPage - 1})}">Previous</a>
+		                <span th:unless="${currentPage > 1}">Prev</span>
+		            </div>
+					<div class="pageNums">
+		                <span  class="paginationButton" th:each="i: ${#numbers.sequence(1, totalPages)}">
+		                    <a th:if="${currentPage != i}" th:href="@{/profile(page=${i})}">[[${i}]]</a>
+		                    <span th:unless="${currentPage != i}">[[${i}]]</span> &nbsp; &nbsp;
+		                </span>
+		            </div>
+		            <div class="paginationButton">
+		                <a th:if="${currentPage < totalPages}" th:href="@{/profile(page=${currentPage + 1})}">Next</a>
+		                <span th:unless="${currentPage < totalPages}">Next</span>
+		            </div>
+		        </div>
+			</div>			
+		</div>
+		<div th:if="${count==0}" class="emptyList">There are no bookmarks</div>
+		<div th:if="${count<5}" class="createNew">
+			<h2>Add a new bookmark</h2>
+			<form action="#" th:action="@{/create}" method="post">
+				<label>Name:
+					<input type="text" name="title"/>
+				</label>
+				<label>URL:
+					<input type="url" name="savedURL"/>
+				</label>		    
+				<input type="submit" value="Save Bookmark"/>
+			</form>	
+		</div>
+		<div th:if="${count==5}" class="createNew">You can save only 5 bookmarks. Delete old ones to add new.</div>
+		<footer>Copyright</footer>
+	</body>
+</html>

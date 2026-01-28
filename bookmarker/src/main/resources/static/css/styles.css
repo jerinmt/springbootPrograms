@@ -1,0 +1,169 @@
+* {
+	box-sizing: border-box;
+	margin: 0%;
+	padding: 0%;
+}
+.paginationButton {
+	width: fit-content;	
+}
+html,body {
+	height: 100%;
+}
+body {
+	background-image: linear-gradient(to bottom right, hsl(110, 20%, 90%), hsl(100, 40%, 50%));
+}
+nav {
+	background-image: linear-gradient(to right, hsl(210, 100%, 20%), hsl(200, 90%, 25%));
+	position: sticky;
+	top: 0;
+	width: 100%;
+}
+nav ul {
+	display: flex;
+	justify-content: space-evenly;
+	list-style-type: none;
+	padding: 10px;
+}
+li a {
+	color: hsl(0, 0%, 95%);
+}
+footer {
+	color: hsl(0, 0%, 95%);
+	background-image: linear-gradient(to right, hsl(210, 100%, 20%), hsl(200, 90%, 25%));
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 10px;
+	text-align: center;
+}
+.welcome {
+	width: 60%;
+	margin-inline:auto;
+	padding-block:80px;
+}
+.welcome img {
+	float: left;
+}
+.welcome p{
+	margin-block-start: 30px;
+}
+.message {
+	margin-inline: auto;
+}
+.loginForm, h2, .registerForm {
+	width: fit-content;
+	margin-inline:auto;
+	margin-block: 80px;
+}
+h2 {
+	font-size: 40px;
+}
+.loginButton,
+.regButton {
+	color: hsl(0, 0%, 5%);
+	background-image: linear-gradient(to right, hsl(300, 10%, 70%));
+	border-radius: 4px;
+}
+input {
+	padding: 8px;
+}
+.loginForm label,
+.registerForm label {
+	font-size: 24px;
+}
+.loginForm div,
+.registerForm div {
+	display: flex;
+	justify-content: center;
+	margin-block-start: 10px;
+}
+.search {
+	margin-block:0;
+	padding-block: 0;
+}
+.search h2 {
+	font-size: 20px;
+	width: fit-content;
+	margin-inline:auto;
+	margin-block:0;
+}
+.search form {
+	text-align: center;
+}
+.searchBar {
+	width: 400px;
+	border-radius: 6px;
+}
+h1 {
+	padding-inline-start: 80px;
+}
+.list h2{
+	font-size: 25px;
+	width: fit-content;
+	margin-inline:auto;
+	margin-block:5px 0px;
+}
+.emptyList {
+	width: fit-content;
+	margin-inline:auto;
+	margin-block:20px;
+}
+table {
+	width: fit-content;
+	margin-inline: auto;
+}
+td {
+	padding-inline: 5px;
+}
+.row {
+	display: flex;
+	width: fit-content;
+	margin-inline:auto;
+	justify-content: center;
+	gap: 4px;
+}
+.pageNums {
+	display: flex;
+	gap: 4px;
+}
+.paginationButton {
+	flex: 1;
+	width: fit-content;
+	background-color: hsl(0, 0%, 80%);
+	border: 1px solid hsl(0, 0%, 70%);
+	border-radius: 6px;
+	padding: 2px;
+	text-align: center;
+}
+.createNew {
+	width: fit-content;
+	margin-inline:auto;
+}
+.createNew h2 {
+	font-size: larger;
+}
+.createNew form {
+	width: fit-content;
+}
+.delButton {
+	width: fit-content;
+	margin-inline:auto;
+}
+.delButton input{
+	background-color: hsl(0, 100%, 50%);
+	color: hsl(0, 0%, 95%);
+}
+.delConfirm {
+	margin-block: 50px;
+}
+.cancelLink,
+.editConfirm,
+.editForm {
+	display: block;
+	width: fit-content;
+	margin-inline:auto;
+}
+.editConfirm,
+.editForm {
+	margin-block-start:80px;
+}

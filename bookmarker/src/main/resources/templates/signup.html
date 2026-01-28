@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register with us</title>
+	<link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+	<nav><ul>
+		<li><a th:href="@{/}">Home</a> </li>
+		<li><a href="@{/login}">Login</a> </li>
+	</ul></nav>
+    <h2>Registration Form</h2>
+    <form th:action="@{/registration}" method="post" role="form" th:object="${user}" class="registerForm">
+      	<label>Username:
+        	<input th:field="*{username}" type="text" name="username" placeholder="Enter your username" required>
+		</label>            
+        <label>Password:
+        	<input th:field="*{password}" type="password" id="password" name="password" placeholder="Enter your password" required>
+		</label>            
+        <label>Confirm Password:
+        	<input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+		</label>
+        <div>
+			<input type="submit" value="Register" onclick="return validate()" class="regButton">	
+		</div>
+		
+    </form>
+	<footer>Copyright</footer>
+    <script>
+    	function validate() {
+        	let password = document.getElementById("password").value;
+        	let confirmPassword = document.getElementById("confirmPassword").value;
+        	if (password != confirmPassword) {
+          		alert("Passwords do not match.");
+	    		return false;
+	        }
+        	return true;
+    	}         
+	</script> 
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Search Results</title>
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+	<body>
+		<nav><ul>
+			<li><a th:href="@{/}">Home</a> </li>
+			<li><a href="/logout">Logout</a> </li>
+		</ul></nav>
+		<h1>Search result</h1>
+		<div th:if="${bookmarks.isEmpty()}" class="list">There are no bookmarks with that keyword</div>
+		<table th:if="${!bookmarks.isEmpty()}">
+		    <thead>
+		        <tr>
+		            <th>Name</th>
+		            <th>URL</th>
+					<th>Saved on</th>
+		            <th>Actions</th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		        <tr th:each="bookmark : ${bookmarks}">			            
+		            <td th:text="${bookmark.title}"></td>
+		            <td><a th:href="${bookmark.savedURL}" th:text="${bookmark.savedURL}"></a></td>
+					<td th:text="${bookmark.savedDate}"></td>			  
+		            <td>
+		                <a th:href="@{/update/{id}(id=${bookmark.id})}">Edit</a>
+					    <a th:href="@{/delete/{id}(id=${bookmark.id})}">Delete</a>							            
+		            </td>
+		        </tr>
+		    </tbody>
+		</table>
+		<footer>Copyright</footer>
+	</body>
+</html>

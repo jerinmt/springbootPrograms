@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">	    
+		<title>Welcome</title>
+		<link rel="stylesheet" href="/css/styles.css">
+	</head>
+	<body>
+		<nav><ul>
+			<li><a th:href="@{/login}">Login</a></li>
+			<li><a th:href="@{/registration}">Register</a></li>
+		</ul></nav>
+		<div class="welcome">
+			<img src="/images/bookmark-filled.svg" alt="picture of a bookmark" width="400px" height="400px">
+			<p>Welcome to JMT Bookmark App. Here you can store your favourite urls as bookmarks. You can store upto 5 links(more in the future).</p>
+			<p>Login to see and manage your saved bookmarks or register now to start enjoying the app.</p>
+		</div>		
+		<footer>Copyright</footer>
+	</body>
+</html>
